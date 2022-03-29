@@ -288,7 +288,7 @@ footer{
     }
 }
 
-@media screen and (max-height: 320px){
+@media screen and (orientation: landscape) and (max-height: 420px){
 	.contener{
 		height: auto;
 	}
