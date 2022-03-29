@@ -224,7 +224,7 @@ footer{
 		display: block;
 	}
 }
-/* @media screen and (max-width: 1000px ) {
+@media screen and (max-width: 1000px ) {
     .cards{
         flex-direction: column;
     }
@@ -286,7 +286,7 @@ footer{
         width: calc(var(--card-width)*0.8);
 		height: calc(var(--card-height)*0.8);
     }
-} */
+}
 
 @media screen and (max-height: 320px){
 	.contener{
