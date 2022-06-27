@@ -39,20 +39,24 @@ btn.addEventListener("click", function(){
     btn.classList.toggle("icon-cancel");
     btn.classList.toggle("icon-menu");
     nav_menu.classList.toggle("active");
+	display_clock();
+	
+});
+function display_clock(){
 	if (nav_menu.classList.contains('active')){
 		clock.style.display = 'none';
 	} else {
 		clock.style.display = 'block';
 	}
-	
-});
+}
 
 function close_menu_when_click_scroll(){
 	if (nav_menu.classList.contains('active')){
 		nav_menu.classList.remove("active");
 		btn.classList.toggle("icon-cancel");
 		btn.classList.toggle("icon-menu");
-	} else return
+		display_clock();
+	} else return;
 }
 let mp = document.getElementById("mp");
 let of = document.getElementById("of");
