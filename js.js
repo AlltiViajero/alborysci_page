@@ -22,6 +22,9 @@ let price = document.getElementById("price");
 let contact = document.getElementById("contact");
 
 window.addEventListener('scroll', ()=>{
+	if (main_page.getBoundingClientRect().top < window.innerHeight * 0.8){
+        main_page.style.opacity = 1;
+    }
     if (oferts.getBoundingClientRect().top < window.innerHeight * 0.8){
         oferts.style.opacity = 1;
     }
@@ -31,6 +34,9 @@ window.addEventListener('scroll', ()=>{
     if (contact.getBoundingClientRect().top < window.innerHeight * 0.8){
         contact.style.opacity = 1;
     }
+	if (nav_menu.classList.contains('active')){
+		nav_menu.classList.toggle("active");
+	}
     
 })
 
