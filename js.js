@@ -22,9 +22,6 @@ let price = document.getElementById("price");
 let contact = document.getElementById("contact");
 
 window.addEventListener('scroll', ()=>{
-	if (main_page.getBoundingClientRect().top < window.innerHeight * 0.8){
-        main_page.style.opacity = 1;
-    }
     if (oferts.getBoundingClientRect().top < window.innerHeight * 0.8){
         oferts.style.opacity = 1;
     }
@@ -33,12 +30,7 @@ window.addEventListener('scroll', ()=>{
     }
     if (contact.getBoundingClientRect().top < window.innerHeight * 0.8){
         contact.style.opacity = 1;
-    }
-	if (nav_menu.classList.contains('active')){
-		nav_menu.classList.toggle("active");
-		console.log('hi')
-	}
-    
+    }	
 })
 const clock = document.getElementById('clock');
 const btn = document.getElementById("btn");
@@ -53,4 +45,20 @@ btn.addEventListener("click", function(){
 		clock.style.display = 'block';
 	}
 	
-})
+});
+
+function close_menu_when_click_scroll(){
+	if (nav_menu.classList.contains('active')){
+		nav_menu.classList.remove("active");
+		btn.classList.toggle("icon-cancel");
+		btn.classList.toggle("icon-menu");
+	} else return
+}
+let mp = document.getElementById("mp");
+let of = document.getElementById("of");
+let pri = document.getElementById("pri");
+let con = document.getElementById("con");
+mp.addEventListener('click', () => close_menu_when_click_scroll())
+of.addEventListener('click', () => close_menu_when_click_scroll())
+pri.addEventListener('click', () => close_menu_when_click_scroll())
+con.addEventListener('click', () => close_menu_when_click_scroll())
