@@ -36,14 +36,21 @@ window.addEventListener('scroll', ()=>{
     }
 	if (nav_menu.classList.contains('active')){
 		nav_menu.classList.toggle("active");
+		console.log('hi')
 	}
     
 })
-
+const clock = document.getElementById('clock');
 const btn = document.getElementById("btn");
 const nav_menu = document.querySelector(".nav_menu");
 btn.addEventListener("click", function(){
     btn.classList.toggle("icon-cancel");
     btn.classList.toggle("icon-menu");
     nav_menu.classList.toggle("active");
+	if (nav_menu.classList.contains('active')){
+		clock.style.display = 'none';
+	} else {
+		clock.style.display = 'block';
+	}
+	
 })

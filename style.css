@@ -39,12 +39,14 @@ header{
 }
 .clock{
 	min-height: 100px;
-	float: left;
+	/* float: left; */
 	display: flex;
 	align-items: center;
 	position: absolute;
+	left: 5px;
 	overflow: hidden;
 	border-radius: 5%;
+	z-index: 0;
 }
 #clock{
 	color:bisque;
@@ -317,7 +319,8 @@ footer{
 		font-size: calc(var(--font-size)*0.6);
 	}
 	.clock::after{
-		background-color: #172b4d;;
+		/* background-color: #172b4d; */
+		inset: 5px ;
 	}
     .menu{
         flex-direction: column;
@@ -361,11 +364,6 @@ footer{
 		height: 80px;
 	}
 }
-@media screen and (max-width: 1160px ) {
-    /* .cards{
-        flex-direction: column;
-    } */
-}
 @media screen and (max-width: 1020px ){
 	.card{
         width: calc(var(--card-width)*0.65);
@@ -392,9 +390,9 @@ footer{
 	}
 }
 @media screen and (max-width: 840px ){
-	.clock{
+	/* .clock{
 		display: none;
-	}
+	} */
 }
 @media screen and (max-width: 540px ) {
 	.bg{
