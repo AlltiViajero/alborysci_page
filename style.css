@@ -62,7 +62,7 @@ header{
     left: 50%;
 	transform: translate(-50%);
     background: linear-gradient(var(--bg-clr-1), var(--bg-clr-2), var(--bg-clr-3), var(--bg-clr-4));
-    animation: animate 3s linear infinite;
+    animation: animate 2s linear infinite;
 }
 .clock::after{
     content: "";
